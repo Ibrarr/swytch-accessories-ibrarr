@@ -1,0 +1,88 @@
+#top-fifty-accessories {
+  padding: 20px;
+  font-family: inherit;
+  max-width: 1140px;
+  margin: auto;
+}
+#top-fifty-accessories .accessories-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: space-between;
+}
+#top-fifty-accessories .accessories-top h1 {
+  color: #0d1529;
+  margin-top: 0;
+  font-size: 2em;
+}
+#top-fifty-accessories .accessories-top #currency {
+  text-align: right;
+  margin-left: 20px;
+}
+#top-fifty-accessories .accessories-top #currency select {
+  padding: 5px;
+}
+#top-fifty-accessories #container-accessories {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+#top-fifty-accessories #container-accessories .single-accessory {
+  background-color: #ededed;
+  padding: 20px;
+  border-radius: 5px;
+  transition: all 0.3s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: space-between;
+}
+#top-fifty-accessories #container-accessories .single-accessory:hover {
+  transform: scale(1.04);
+}
+#top-fifty-accessories #container-accessories .single-accessory p {
+  color: #0d1529;
+  margin: 0;
+}
+#top-fifty-accessories #container-accessories .single-accessory .accessory-info h3 {
+  color: #0d1529;
+  margin: 0;
+  font-size: 1.17em;
+}
+#top-fifty-accessories #container-accessories .single-accessory .accessory-info h3:after {
+  content: "";
+  display: block;
+  width: 33.333%;
+  margin: 5px 0px;
+  border: 1px solid #ffbd37;
+}
+#top-fifty-accessories #container-accessories .single-accessory .price {
+  text-align: right;
+}
+#top-fifty-accessories #container-accessories .single-accessory .price.usd, #top-fifty-accessories #container-accessories .single-accessory .price.eur {
+  display: none;
+}
+#top-fifty-accessories #container-accessories .single-accessory .price .regular {
+  text-decoration: line-through;
+  font-size: 12px;
+}
+#top-fifty-accessories #container-accessories .single-accessory .price .sale {
+  color: red;
+  font-weight: bold;
+}
+
+@media only screen and (max-width: 889px) {
+  #top-fifty-accessories #container-accessories {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media only screen and (max-width: 768px) {
+  #top-fifty-accessories #container-accessories {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media only screen and (max-width: 520px) {
+  #top-fifty-accessories #container-accessories {
+    grid-template-columns: 1fr;
+  }
+}
